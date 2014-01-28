@@ -1,0 +1,2 @@
+recursive-include esdrt *
+global-exclude *pyc

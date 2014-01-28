@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="esdrt.theme">
+
+    <!-- 'ESDRT Theme' Zope 3 browser layer
+      Register views, viewlets and resources for this layer to make sure
+      they only apply to the 'ESDRT Theme' theme.
+      You can also use this layer to override default Plone browser views
+      and viewlets only within the 'ESDRT Theme' theme.
+      -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="ESDRT Theme"
+        />
+
+    <include package="z3c.jbot" file="meta.zcml" />
+
+    <browser:jbot
+        directory="template-overrides"
+        layer=".interfaces.IThemeSpecific" />
+
+</configure>

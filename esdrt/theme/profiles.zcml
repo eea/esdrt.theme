@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="esdrt.theme">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="esdrt.theme: ESDRT Theme"
+      directory="profiles/default"
+      description="Theme for esdrt.theme. Skin name: 'ESDRT Theme'"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

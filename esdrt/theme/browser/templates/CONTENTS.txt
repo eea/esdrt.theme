@@ -1,0 +1,10 @@
+Use this template to drop Grok-based view templates.
+
+For that, use this code in your view file::
+
+    from five import grok
+
+    grok.templatedir('templates')
+
+    class YourView(grok.View):
+        pass
