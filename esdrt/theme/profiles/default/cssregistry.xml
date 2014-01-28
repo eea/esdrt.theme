@@ -30,65 +30,12 @@
 
 
  <!-- Deactivate emtpy CSS stylesheet that come with Sunburst theme -->
- <stylesheet title=""
-    id="base.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="authoring.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="controlpanel.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="deprecated.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="navtree.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="invisibles.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="forms.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="RTL.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>
 
  <stylesheet title=""
     id="ploneCustom.css"
     media="screen" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
     enabled="0" expression=""/>
-
- <stylesheet title=""
-    id="mobile.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="0" expression=""/>    
 
 
 </object>
