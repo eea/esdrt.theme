@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object> 
+ <hidden manager="plone.portalheader" skinname="ESDRT Theme">
+  <viewlet name="plone.searchbox"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="ESDRT Theme">
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="ESDRT Theme">
+  <viewlet name="plone.site_actions"/>
+ </hidden> 
+</object>

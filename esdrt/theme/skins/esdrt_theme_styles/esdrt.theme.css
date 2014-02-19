@@ -1,1 +1,137 @@
 /* Add here your CSS commands */
+body {
+	font: 75% Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin: 0;
+	padding: 0px;
+	background-color: transparent;
+}
+#portal-columns{
+	overflow: visible !important;
+	padding: 0;
+	display: block;
+	clear: both;
+	position: relative;
+	float: none;
+	min-width: 995px;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+#header-holder {
+	width: 100%;
+	min-width: 995px;
+	clear: both;
+	display: block;
+	position: relative;
+	background-color: #777c1f;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b1c748), to(#777c1f));
+	background-image: -webkit-linear-gradient(center top , #b1c748, #777c1f);
+	background-image: -moz-linear-gradient(center top , #b1c748, #777c1f);
+	background-image: -ms-linear-gradient(center top , #b1c748, #777c1f);
+	background-image: -o-linear-gradient(center top , #b1c748, #777c1f);
+	background: linear-gradient(#b1c748, #777c1f);
+	height: 89px;
+}
+#header{
+	margin: 0 auto;
+	min-width: 995px;
+	max-width: 1024px;
+	padding-top: 12px;
+}
+#header h1{
+	float: left;
+	color: white;
+	margin-top: 16px;
+}
+#eea-logo-holder{
+	float: right;
+}
+#climate-action-logo-holder{
+	float: right;
+	margin-right: 14px;
+}
+#climate-action-logo-holder span{
+	color:white;
+}
+#climate-action-logo-holder{
+	margin-top: 16px;
+	color: white;
+}
+#climate-action-logo-holder img{
+	height: 43px;
+	vertical-align: middle;
+}
+.bold{
+	font-weight: bold;
+}
+
+#portal-footer {
+	background: #478EA5;
+	background-image: -webkit-linear-gradient(top,#478EA5,#346F83);
+	background: -webkit-linear-gradient(#478EA5, #346F83);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')";
+	background: -moz-linear-gradient(#478EA5, #346F83) repeat scroll 0 0 transparent;
+	background-image: -ms-linear-gradient(top,#478EA5,#346F83);
+	background-image: -o-linear-gradient(top,#478EA5,#346F83);
+	background-image: linear-gradient(top,#478EA5,#346F83);
+	margin: 2em 0 2em 0;
+	padding: 2em 1em;
+	clear: both;
+	min-width: 973px;	
+	height: 141px;
+}
+#portal-personaltools-wrapper{
+	background-color: white;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width: 970px;
+	border-top: 2px solid #B1C748;
+}
+#portal-personaltools{
+	margin: 4px 0 4px 0;
+	background-color: transparent;
+	padding-top: 0px;
+}
+#personalbar-options{
+	float: right;
+	margin: 4px 0 4px 0;
+}
+#user-name{
+	padding-top: 2px;
+}
+#siteaction-about .eea-icon:before{
+	content: "\f013";
+}
+#siteaction-help .eea-icon:before{
+	content: "\f059";
+}
+#user-name .eea-icon:before,
+#anon-personalbar .eea-icon:before{
+	content: "\f007";
+}
+#siteaction-logout .eea-icon:before{
+	content: "\f08b";
+}
+#personalbar-options li a:link,
+#personalbar-options li a:visited,
+#portal-personaltools li a:link, 
+#portal-personaltools li a:visited {
+	background-color: transparent;
+	height: auto;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 11px;
+	color: #346f83 !important;
+}
+#personalbar-options li a:hover,
+#portal-personaltools li a:hover{ 
+	color: #b1c748 !important;
+}
+#portal-globalnav{
+	min-width: 995px;
+	max-width: 1024px;
+	margin: 0 auto 1em auto;
+}

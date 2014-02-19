@@ -20,5 +20,25 @@
     <browser:jbot
         directory="template-overrides"
         layer=".interfaces.IThemeSpecific" />
-
+    <browser:viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets.LogoViewlet"
+        permission="zope.Public"
+        />
+    <browser:viewlet
+        name="plone.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets.FooterViewlet"
+        permission="zope.Public"
+        /> 
+    <browser:viewlet
+        name="plone.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets.PersonalBarViewlet"
+        permission="zope.Public"
+        />           
 </configure>
