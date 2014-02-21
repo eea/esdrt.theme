@@ -3,7 +3,7 @@
     <h1>EEA Review Tool</h1>
     <div id="eea-logo-holder">
       <a href="http://www.eea.europa.eu/" target="_blank" title="European Environmental Agency">
-        <img src="eea.gif"/ alt="European Environmental Agency">
+        <img src="eea.gif" alt="European Environmental Agency"/>
       </a>
     </div>    
     <div id="climate-action-logo-holder">
