@@ -1,6 +1,6 @@
 /* Add here your CSS commands */
 body {
-	font: 75% Verdana, Arial, Helvetica, sans-serif;
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
 	color: #333333;
 	margin: 0;
 	padding: 0px;
@@ -42,6 +42,7 @@ body {
 	float: left;
 	color: white;
 	margin-top: 16px;
+	font-size: 24px;
 }
 #eea-logo-holder{
 	float: right;
@@ -49,14 +50,14 @@ body {
 #climate-action-logo-holder{
 	float: right;
 	margin-right: 14px;
-}
-#climate-action-logo-holder span{
-	color:white;
-}
-#climate-action-logo-holder{
 	margin-top: 16px;
 	color: white;
 }
+#climate-action-logo-holder span{
+	color:white;
+	font-size: 12px;
+}
+
 #climate-action-logo-holder img{
 	height: 43px;
 	vertical-align: middle;
