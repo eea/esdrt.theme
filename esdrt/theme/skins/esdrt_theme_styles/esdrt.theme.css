@@ -12,10 +12,11 @@ body {
 	display: block;
 	clear: both;
 	position: relative;
-	float: none;
+}
+#portal-column-content > div{
+	margin: 0px auto;
 	min-width: 995px;
 	max-width: 1024px;
-	margin: 0 auto;
 }
 #header-holder {
 	width: 100%;
