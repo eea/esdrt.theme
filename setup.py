@@ -15,9 +15,9 @@ setup(name='esdrt.theme',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Mikel Santamaria',
+      author_email='msantamaria@bilbomatica.es',
+      url='https://github.com/eea/esdrt.theme/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['esdrt'],
@@ -34,7 +34,5 @@ setup(name='esdrt.theme',
 
       [z3c.autoinclude.plugin]
       target = plone
-      """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      """
       )
