@@ -1,6 +1,4 @@
 Introduction
 ============
 
-
-
-This product may contain traces of nuts.
+Product containing the theme for the Effort Sharing Decission Review Tool
