@@ -27,6 +27,7 @@ setup(name='esdrt.theme',
           'setuptools',
           'z3c.jbot',
           'five.grok',
+          'eea.icons',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
