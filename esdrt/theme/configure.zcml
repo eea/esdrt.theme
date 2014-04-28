@@ -12,5 +12,6 @@
 
    <include file="skins.zcml" />
    <include file="profiles.zcml" />
+   <include package=".upgrades" />
 
 </configure>
