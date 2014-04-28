@@ -137,3 +137,12 @@ body {
 	max-width: 1024px;
 	margin: 0 auto 1em auto;
 }
+.portaltype-question .observationDetailsRow{
+	display: none;
+}
+.portaltype-observation .showObservationDetailsRow{
+	display: none;
+}
+.showObservationDetailsRow div{
+	text-align: right;
+}
