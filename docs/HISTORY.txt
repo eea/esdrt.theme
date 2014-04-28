@@ -1,9 +1,14 @@
 Changelog
 =========
 
-1.1 (UNRELEASED)
+1.1 (2014-04-28)
 -----------------
 
+- Style changes
+  [msantamaria]
+
+- Register new javascript file
+  [msantamaria]
 
 1.0.1 (2014-04-07)
 ------------------
