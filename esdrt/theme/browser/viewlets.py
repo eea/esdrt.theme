@@ -25,3 +25,12 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         self.about = '/'.join([self.portal_state.navigation_root_url(), "info"])
         self.help = '/'.join([self.portal_state.navigation_root_url(), "help"])        
         self.logout = '/'.join([self.portal_state.navigation_root_url(), "logout"])     
+
+class ProductVersionViewlet(common.ViewletBase):
+    """A viewlet which informs about the Product versions
+    """
+    def get_version(self):
+        qi = getToolByName(self.context, 'portal_quickinstaller')
+        return qi.getProductVersion("esdrt.content")
+
+

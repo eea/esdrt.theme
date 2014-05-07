@@ -40,5 +40,12 @@
         layer=".interfaces.IThemeSpecific"
         class=".viewlets.PersonalBarViewlet"
         permission="zope.Public"
-        />           
+        />     
+    <browser:viewlet
+        name="esdrt.productversion"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        class=".viewlets.ProductVersionViewlet"
+        permission="cmf.ManagePortal"
+        template="templates/product_version.pt"
+        />              
 </configure>
