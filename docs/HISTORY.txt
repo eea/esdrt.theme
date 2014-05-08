@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.2 (UNRELEASED)
+1.2 (2014-05-08)
 -----------------
 
+- Add a viewlet with the version number [erral]
 
 1.1 (2014-04-28)
 -----------------
