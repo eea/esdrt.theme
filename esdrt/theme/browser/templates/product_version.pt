@@ -1,6 +1,6 @@
-<dl class="portalMessage error" i18n:translate="">
+<dl class="portalMessage info" i18n:translate="">
     <dt>
     Product current version: <span tal:content="view/get_version" i18n:name="" />
     </dt>
-<dd>&nbsp;</dd>
+<dd>(Please include the product version when reporting an issue with the tool)</dd>
 </dl>

@@ -31,6 +31,6 @@ class ProductVersionViewlet(common.ViewletBase):
     """
     def get_version(self):
         qi = getToolByName(self.context, 'portal_quickinstaller')
-        return qi.getProductVersion("esdrt.content")
+        return '-'.join([qi.getProductVersion("esdrt.content"), qi.getProductVersion("esdrt.theme")])
 
 
