@@ -45,7 +45,7 @@
         name="esdrt.productversion"
         manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
         class=".viewlets.ProductVersionViewlet"
-        permission="cmf.ManagePortal"
+        permission="zope.Public"
         template="templates/product_version.pt"
         />              
 </configure>
