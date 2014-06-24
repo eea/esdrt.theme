@@ -92,33 +92,28 @@ $(document).ready(function(){
     }	  
     $("tbody tr", table).hover(onRowHoverIn, onRowHoverOut);   
     function onRowHoverIn(e){
-    	var subject = $("tbody", table);
-        var r = -1, child = e.target.parentNode;
-        while ((child = child.previousSibling) != null)
-            if (child.nodeType == 3) ++r;    
-		
+    	var subject = $("tbody", table);		
 		var rows = $("tr", subject);
 
+		$(".observationList tbody tr").removeClass("hover");
+
+		var r = $(this).index();
 		$(rows.get(r)).addClass("hover");
 		if (r % 2){
-			$(rows.get(r - 1)).addClass("hover");
+			$(".observationList tbody tr").eq(r - 1).addClass("hover");
 		}else{
-			$(rows.get(r + 1)).addClass("hover");		
+			$(".observationList tbody tr").eq(r + 1).addClass("hover");		
 		}
     }   
     function onRowHoverOut(e){
-    	var subject = $("tbody", table);
-        var r = -1, child = e.target.parentNode;
-        while ((child = child.previousSibling) != null)
-            if (child.nodeType == 3) ++r;    
-		
-		var rows = $("tr", subject);
+		var r = $(this).index();
 
-		$(rows.get(r)).removeClass("hover");
+		$(".observationList tbody tr").eq(r).removeClass("hover");
+
 		if (r % 2){
-			$(rows.get(r - 1)).removeClass("hover");
+			$(".observationList tbody tr").eq(r - 1).removeClass("hover");
 		}else{
-			$(rows.get(r + 1)).removeClass("hover");			
+			$(".observationList tbody tr").eq(r + 1).removeClass("hover");			
 		}
     }     
 });
