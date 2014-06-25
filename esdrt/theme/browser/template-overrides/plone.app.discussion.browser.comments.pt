@@ -40,15 +40,6 @@
                  tal:condition="python:canReview or review_state == 'published'">
 
                 <div class="commentImage" tal:condition="showCommenterImage">
-                    <a href="" tal:condition="has_author_link"
-                               tal:attributes="href author_home_url">
-                         <img src="defaultUser.png"
-                              alt=""
-                              class="defaultuserimg"
-                              height="32"
-                              tal:attributes="src portrait_url;
-                                              alt reply/author_name" />
-                    </a>
                     <img src="defaultUser.png"
                          alt=""
                          class="defaultuserimg"
@@ -60,13 +51,7 @@
 
                 <div class="documentByLine" i18n:domain="plone.app.discussion">
                     <tal:name>
-                        <a href=""
-                           tal:condition="has_author_link"
-                           tal:content="reply/author_name"
-                           tal:attributes="href author_home_url">
-                            Poster Name
-                        </a>
-                        <span tal:condition="not: has_author_link"
+                        <span
                               tal:replace="reply/author_name" />
                         <span tal:condition="not: reply/author_name"
                               i18n:translate="label_anonymous">Anonymous</span>
