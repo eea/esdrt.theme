@@ -11,6 +11,11 @@ $(document).ready(function(){
 	$(".clickableRow").click(function() {
 	    window.document.location = $(this).data("href");
 	});	
+	$(".datetimeWF").each(function(){
+		var time = $.trim($(this).text());
+		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss").fromNow())
+	})
+	$("#workflowTable").parent().scrollLeft($("#workflowTable").parent().outerWidth())
 	/**
 	 * Observation table sorter
 	*/

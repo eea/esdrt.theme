@@ -140,9 +140,6 @@ body {
 .portaltype-question .observationDetailsRow{
 	display: none;
 }
-.portaltype-observation .showObservationDetailsRow{
-	display: none;
-}
 .showObservationDetailsRow div{
 	text-align: right;
 }
