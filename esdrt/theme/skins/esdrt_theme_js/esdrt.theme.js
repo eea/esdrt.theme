@@ -8,6 +8,24 @@ $(document).ready(function(){
 		}
 		return false;
 	});
+    $("#toggleComments").click(function(e){
+        $("#comment-discussion").toggle();
+        if ($("#toggleComments").text() == "Show question comments"){
+            $("#toggleComments").text("Hide question comments");
+        }else{
+            $("#toggleComments").text("Show question comments");
+        }
+        return false;        
+    });
+    $("#toggleQuestionHistory").click(function(e){
+        $("#questionHistory").toggle();
+        if ($("#toggleQuestionHistory").text() == "Show question history"){
+            $("#toggleQuestionHistory").text("Hide question history");
+        }else{
+            $("#toggleQuestionHistory").text("Show question history");
+        }
+        return false;        
+    });    
 	$(".clickableRow").click(function() {
 	    window.document.location = $(this).data("href");
 	});	
