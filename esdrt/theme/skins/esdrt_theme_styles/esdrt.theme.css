@@ -143,3 +143,25 @@ body {
 .showObservationDetailsRow div{
 	text-align: right;
 }
+.commentDate{
+	display: inline-block;
+}
+.comment {
+	padding: 0px 5px !important;
+	margin-top: 0px;
+}
+.discussion .documentByLine {
+	margin-bottom: 0.5em; 
+	padding: 0px 5px;
+}
+.commentBody {
+	padding: 0px 5px !important;
+}
+.commentBody p {
+	margin-bottom: 0px !important;
+	padding-top: 5px;
+}
+.question div.field,
+.question div.field div {
+	padding: 0px;
+}
