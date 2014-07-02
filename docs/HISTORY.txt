@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.4 (2014-07-02)
+-------------------
+
+- Visualization improvements [msantamaria]
+
 1.3 (2014-05-27)
 --------------------
 
