@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	$("#showObservationDetails").click(function(e){
-		$(".observationDetailsRow").toggle();
-		if ($("#showObservationDetails").text() == "[+]"){
-			$("#showObservationDetails").text("[-]");
-		}else{
-			$("#showObservationDetails").text("[+]");
-		}
-		return false;
-	});
+    $(".collapsiblePanelTitle").click(function(e){
+        var panel = $(this).data("panel");
+        if ($(this).hasClass("collapsed")){
+            $("."+panel).show();
+        }else{
+            $("."+panel).hide();
+        }
+        $(this).toggleClass("collapsed");
+    });
     $("#toggleComments").click(function(e){
-        $("#comment-discussion").toggle();
+        $("#comment-discussion").toggle("blind");
         if ($("#toggleComments").text() == "Show question comments"){
             $("#toggleComments").text("Hide question comments");
         }else{
@@ -18,7 +18,7 @@ $(document).ready(function(){
         return false;        
     });
     $("#toggleQuestionHistory").click(function(e){
-        $("#questionHistory").toggle();
+        $("#questionHistory").toggle("blind");
         if ($("#toggleQuestionHistory").text() == "Show question history"){
             $("#toggleQuestionHistory").text("Hide question history");
         }else{
@@ -33,7 +33,7 @@ $(document).ready(function(){
 		var time = $.trim($(this).text());
 		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss").fromNow())
 	})
-	$("#workflowTable").parent().scrollLeft($("#workflowTable").parent().outerWidth())
+	$("#workflowTable").parent().scrollLeft($("#workflowTable").outerWidth())
 	/**
 	 * Observation table sorter
 	*/
