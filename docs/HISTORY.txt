@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.5 (UNRELEASED)
--------------------
+1.5 (2014-08-08)
+----------------
 
 - Add collapsible panels to observation [msantamaria]
 
