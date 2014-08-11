@@ -171,3 +171,10 @@ body {
 .suppressVisualEditor {
 	display: none;
 }
+.chosen-choices, .chosen-results {
+	margin-left: 0px !important;
+} 
+.search-choice {
+	margin-bottom: 0px !important;
+	line-height: 13px !important;
+}
