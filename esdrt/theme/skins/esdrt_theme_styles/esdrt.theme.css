@@ -165,3 +165,9 @@ body {
 .question div.field div {
 	padding: 0px;
 }
+.fieldTextFormat{
+	display: none;
+}
+.suppressVisualEditor {
+	display: none;
+}
