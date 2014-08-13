@@ -8,15 +8,33 @@ $(document).ready(function(){
         }
         $(this).toggleClass("collapsed");
     });
-    $("#toggleComments").click(function(e){
-        $("#comment-discussion").toggle("blind");
-        if ($("#toggleComments").text() == "Show question comments"){
-            $("#toggleComments").text("Hide question comments");
+    $("#toggleQuestionComments").click(function(e){
+        $("#question-discussion").toggle("blind");
+        if ($("#toggleQuestionComments").text() == "Show question comments"){
+            $("#toggleQuestionComments").text("Hide question comments");
         }else{
-            $("#toggleComments").text("Show question comments");
+            $("#toggleQuestionComments").text("Show question comments");
         }
         return false;        
     });
+    $("#toggleReplyComments").click(function(e){
+        $("#reply-discussion").toggle("blind");
+        if ($("#toggleReplyComments").text() == "Show reply comments"){
+            $("#toggleReplyComments").text("Hide reply comments");
+        }else{
+            $("#toggleReplyComments").text("Show reply comments");
+        }
+        return false;        
+    });    
+    $("#toggleConclussionComments").click(function(e){
+        $("#comment-discussion").toggle("blind");
+        if ($("#conlusion-discussion").text() == "Show question comments"){
+            $("#conlusion-discussion").text("Hide question comments");
+        }else{
+            $("#conlusion-discussion").text("Show question comments");
+        }
+        return false;        
+    });    
     $("#toggleQuestionHistory").click(function(e){
         $("#questionHistory").toggle("blind");
         if ($("#toggleQuestionHistory").text() == "Show question history"){
