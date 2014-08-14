@@ -3,6 +3,9 @@ $(document).ready(function(){
         var panel = $(this).data("panel");
         if ($(this).hasClass("collapsed")){
             $("."+panel).show();
+            if (panel == "observation-workflow"){
+                $("#workflowTable").parent().scrollLeft($("#workflowTable").outerWidth())
+            }
         }else{
             $("."+panel).hide();
         }
@@ -51,7 +54,7 @@ $(document).ready(function(){
 		var time = $.trim($(this).text());
 		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss").fromNow())
 	})
-	$("#workflowTable").parent().scrollLeft($("#workflowTable").outerWidth())
+	
 	/**
 	 * Observation table sorter
 	*/
