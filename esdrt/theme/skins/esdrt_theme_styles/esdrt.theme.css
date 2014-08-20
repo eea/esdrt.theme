@@ -31,7 +31,7 @@ body {
 	background-image: -ms-linear-gradient(center top , #b1c748, #777c1f);
 	background-image: -o-linear-gradient(center top , #b1c748, #777c1f);
 	background: linear-gradient(#b1c748, #777c1f);
-	height: 89px;
+	height: 60px;
 }
 #header{
 	margin: 0 auto;
@@ -42,16 +42,19 @@ body {
 #header h1{
 	float: left;
 	color: white;
-	margin-top: 16px;
 	font-size: 24px;
 }
 #eea-logo-holder{
 	float: right;
+	margin-top: -15px;
+}
+#eea-logo-holder img{
+	height: 62px;
 }
 #climate-action-logo-holder{
 	float: right;
 	margin-right: 14px;
-	margin-top: 16px;
+	margin-top: -5px;
 	color: white;
 }
 #climate-action-logo-holder span{
@@ -78,10 +81,11 @@ body {
 	background-image: -o-linear-gradient(top,#478EA5,#346F83);
 	background-image: linear-gradient(top,#478EA5,#346F83);
 	margin: 2em 0 2em 0;
-	padding: 2em 1em;
+	/**padding: 2em 1em;*/
+	padding: 0px !important;
 	clear: both;
 	min-width: 973px;	
-	height: 141px;
+	height: 10px;
 }
 #portal-personaltools-wrapper{
 	background-color: white;
