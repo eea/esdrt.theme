@@ -67,7 +67,24 @@
                     </div>
                 </div>
 
+                <div class="files" tal:condition="reply/attachment|nothing">
+                  <div class="file">
+                    <span class="eea-icon eea-icon-lg attachment"></span>
+                    <a
+                       tal:content="reply/attachment/filename"
+                       tal:attributes="href string:${reply/absolute_url}/@@download/attachment/${reply/attachment/filename}">
+                        Attachment
+                    </a>
+                    <a href=""
+                       tal:condition="here/can_add_files|nothing"
+                       tal:attributes="href string:${reply/absolute_url}/@@copy-attachment-to-answer">
+                       Copy file to answer
+                    </a>
+                  </div>
+                </div>
+
                 <div class="commentBody">
+
 
                     <span tal:replace="structure reply/getText" />
 
