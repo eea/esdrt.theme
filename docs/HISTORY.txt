@@ -1,8 +1,10 @@
 Changelog
 =========
 
-1.7 (UNRELEASED)
+1.7 (2014-08-25)
 -----------------
+
+- Show attachment links in comments [erral]
 
 
 1.6 (2014-08-20)
