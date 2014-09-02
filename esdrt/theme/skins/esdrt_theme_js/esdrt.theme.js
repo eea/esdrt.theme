@@ -18,7 +18,7 @@ $(document).ready(function(){
         }else{
             $("#toggleQuestionComments").text("Show question comments");
         }
-        return false;        
+        return false;
     });
     $("#toggleReplyComments").click(function(e){
         $("#reply-discussion").toggle("blind");
@@ -27,17 +27,17 @@ $(document).ready(function(){
         }else{
             $("#toggleReplyComments").text("Show reply comments");
         }
-        return false;        
-    });    
+        return false;
+    });
     $("#toggleConclussionComments").click(function(e){
-        $("#comment-discussion").toggle("blind");
-        if ($("#conlusion-discussion").text() == "Show question comments"){
-            $("#conlusion-discussion").text("Hide question comments");
+        $("#conlusion-discussion").toggle("blind");
+        if ($("#toggleConclussionComments").text() == "Show conclusion comments"){
+            $("#toggleConclussionComments").text("Hide conclusion comments");
         }else{
-            $("#conlusion-discussion").text("Show question comments");
+            $("#toggleConclussionComments").text("Show conclusion comments");
         }
-        return false;        
-    });    
+        return false;
+    });
     $("#toggleQuestionHistory").click(function(e){
         $("#questionHistory").toggle("blind");
         if ($("#toggleQuestionHistory").text() == "Show question history"){
@@ -45,16 +45,16 @@ $(document).ready(function(){
         }else{
             $("#toggleQuestionHistory").text("Show question history");
         }
-        return false;        
-    });    
+        return false;
+    });
 	$(".clickableRow").click(function() {
 	    window.document.location = $(this).data("href");
-	});	
+	});
 	$(".datetimeWF").each(function(){
 		var time = $.trim($(this).text());
 		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss").fromNow())
 	})
-	
+
 	/**
 	 * Observation table sorter
 	*/
@@ -77,8 +77,8 @@ $(document).ready(function(){
 
 
         var subject = $("tbody", table);
-        
-        
+
+
         if ($(e.target).hasClass("asc")){
         	order = "desc";
         }else{
@@ -87,7 +87,7 @@ $(document).ready(function(){
         var replacement = sort(subject, r, c, order);
 
         $("thead th", table).removeClass("asc").removeClass("desc");
-        
+
         $(e.target).addClass(order);
 
         subject.replaceWith(replacement);
@@ -106,7 +106,7 @@ $(document).ready(function(){
             }else {
             	var sub = record[r].children[c].innerText; //This is our sort subject.
             }
-            
+
             vals.push({"sub": sub, "record": record});
         }
         if (order == "asc"){
@@ -128,15 +128,15 @@ $(document).ready(function(){
         var atext = a.sub.toLowerCase();
         var btext = b.sub.toLowerCase();
         return atext < btext ? -1 : atext > btext ? 1 : 0;
-    }	
+    }
     function reverseCompare(a, b) {
         var atext = a.sub.toLowerCase();
         var btext = b.sub.toLowerCase();
         return atext > btext ? -1 : atext < btext ? 1 : 0;
-    }	  
-    $("tbody tr", table).hover(onRowHoverIn, onRowHoverOut);   
+    }
+    $("tbody tr", table).hover(onRowHoverIn, onRowHoverOut);
     function onRowHoverIn(e){
-    	var subject = $("tbody", table);		
+    	var subject = $("tbody", table);
 		var rows = $("tr", subject);
 
 		$(".observationList tbody tr").removeClass("hover");
@@ -146,9 +146,9 @@ $(document).ready(function(){
 		if (r % 2){
 			$(".observationList tbody tr").eq(r - 1).addClass("hover");
 		}else{
-			$(".observationList tbody tr").eq(r + 1).addClass("hover");		
+			$(".observationList tbody tr").eq(r + 1).addClass("hover");
 		}
-    }   
+    }
     function onRowHoverOut(e){
 		var r = $(this).index();
 
@@ -157,7 +157,7 @@ $(document).ready(function(){
 		if (r % 2){
 			$(".observationList tbody tr").eq(r - 1).removeClass("hover");
 		}else{
-			$(".observationList tbody tr").eq(r + 1).removeClass("hover");			
+			$(".observationList tbody tr").eq(r + 1).removeClass("hover");
 		}
-    }     
+    }
 });
