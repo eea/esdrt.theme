@@ -4,6 +4,8 @@ Changelog
 1.8 (UNRELEASED)
 ------------------
 
+- Javascript fixes [erral]
+
 1.7 (2014-08-25)
 -----------------
 
