@@ -1,7 +1,18 @@
 Changelog
 =========
 
-1.6 (unreleased)
+1.8 (2014-09-02)
+------------------
+
+- Javascript fixes [erral]
+
+1.7 (2014-08-25)
+-----------------
+
+- Show attachment links in comments [erral]
+
+
+1.6 (2014-08-20)
 ----------------
 
 - Update favicon [MikelS]
