@@ -11,42 +11,6 @@ $(document).ready(function(){
         }
         $(this).toggleClass("collapsed");
     });
-    $("#toggleQuestionComments").click(function(e){
-        $("#question-discussion").toggle("blind");
-        if ($("#toggleQuestionComments").text() == "Show question comments"){
-            $("#toggleQuestionComments").text("Hide question comments");
-        }else{
-            $("#toggleQuestionComments").text("Show question comments");
-        }
-        return false;
-    });
-    $("#toggleReplyComments").click(function(e){
-        $("#reply-discussion").toggle("blind");
-        if ($("#toggleReplyComments").text() == "Show reply comments"){
-            $("#toggleReplyComments").text("Hide reply comments");
-        }else{
-            $("#toggleReplyComments").text("Show reply comments");
-        }
-        return false;
-    });
-    $("#toggleConclussionComments").click(function(e){
-        $("#conlusion-discussion").toggle("blind");
-        if ($("#toggleConclussionComments").text() == "Show conclusion comments"){
-            $("#toggleConclussionComments").text("Hide conclusion comments");
-        }else{
-            $("#toggleConclussionComments").text("Show conclusion comments");
-        }
-        return false;
-    });
-    $("#toggleQuestionHistory").click(function(e){
-        $("#questionHistory").toggle("blind");
-        if ($("#toggleQuestionHistory").text() == "Show question history"){
-            $("#toggleQuestionHistory").text("Hide question history");
-        }else{
-            $("#toggleQuestionHistory").text("Show question history");
-        }
-        return false;
-    });
 	$(".clickableRow").click(function() {
 	    window.document.location = $(this).data("href");
 	});
@@ -58,7 +22,7 @@ $(document).ready(function(){
 	/**
 	 * Observation table sorter
 	*/
-    var table = $(".observationList");
+    /**var table = $(".observationList");
 
     //Make head header in the THEAD sortable.
     $("thead th", table).on("click", onSortableClicked);
@@ -99,7 +63,8 @@ $(document).ready(function(){
 
         var vals = [];
         for (var i = 0; i < rows.length; i+=2) {
-            var record = [rows.get(i), rows.get(i+1)]; //Record is two rows.
+            //var record = [rows.get(i), rows.get(i+1)]; //Record is two rows.
+            var record = [rows.get(i)]; 
 
             if ($(record[r].children[c]).data("sorter") != undefined){
             	var sub = $(record[r].children[c]).data("sorter");
@@ -118,7 +83,7 @@ $(document).ready(function(){
         for (var i = 0; i < vals.length; ++i) {
             var val = vals[i];
             sorted.appendChild(val.record[0]);
-            sorted.appendChild(val.record[1]);
+            //sorted.appendChild(val.record[1]);
         }
 
         return sorted;
@@ -159,5 +124,5 @@ $(document).ready(function(){
 		}else{
 			$(".observationList tbody tr").eq(r + 1).removeClass("hover");
 		}
-    }
+    }	  */   
 });

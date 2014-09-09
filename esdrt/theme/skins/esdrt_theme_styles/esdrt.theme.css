@@ -182,3 +182,52 @@ body {
 	margin-bottom: 0px !important;
 	line-height: 13px !important;
 }
+i.observation:before{
+	content: "\f0f6";
+	position: absolute;
+	top: 8px;
+	left: -8px;
+}
+#tab-observation-history, 
+#tab-workflow,
+#tab-question-chat-room,
+#tab-conclusions,
+#tab-finish-observation{
+	width: 100%;
+	padding-left: 0px !important;
+	padding-right: 0px !important;	
+}
+#tab-observation-history:before, 
+#tab-workflow:before,
+#tab-question-chat-room:before,
+#tab-conclusions:before,
+#tab-finish-observation:before{
+	display: inline-block;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+	line-height: inherit;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	speak: none;
+	margin: 0 .3em;
+	color: black;
+	font-size: 2em;
+
+}
+#tab-conclusions:before {
+	content: "\f00c";
+}
+#tab-observation-history:before {
+	content: "\f0e8";
+}
+#tab-workflow:before{
+	content: "\f017";
+}
+#tab-question-chat-room:before {
+	content: "\f0e6";
+}
+#tab-finish-observation:before {
+	content: "\f023";
+}
