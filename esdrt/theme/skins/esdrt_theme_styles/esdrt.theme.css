@@ -183,10 +183,11 @@ body {
 	line-height: 13px !important;
 }
 i.observation:before{
-	content: "\f0f6";
+	content: "\f15c";
 	position: absolute;
-	top: 8px;
-	left: -8px;
+	top: 12px;
+	left: -3px;
+	font-size: 34px;
 }
 #tab-observation-history, 
 #tab-workflow,
