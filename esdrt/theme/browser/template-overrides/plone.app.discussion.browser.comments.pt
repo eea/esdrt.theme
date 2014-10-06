@@ -69,7 +69,10 @@
 
                 <div class="files" tal:condition="reply/attachment|nothing">
                   <div class="file">
-                    <span class="eea-icon eea-icon-lg attachment"></span>
+                    <span class="eea-icon eea-icon-lg attachment" tal:attributes="class string: eea-icon eea-icon-lg attachment"></span>
+                    <span class="eea-icon eea-icon-lg confidential"
+                      title="Confidential file (Only available for people taking part in the review process)"
+                      tal:condition="reply/confidential"></span>
                     <a
                        tal:content="reply/attachment/filename"
                        tal:attributes="href string:${reply/absolute_url}/@@download/attachment/${reply/attachment/filename}">
