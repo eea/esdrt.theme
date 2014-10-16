@@ -3,6 +3,6 @@
   <version>1001</version>
     <dependencies>
         <dependency>profile-esdrt.content:default</dependency>
-        <dependency>profile-plone.app.workflowmnager:default</dependency>
+        <dependency>profile-plone.app.workflowmanager:default</dependency>
     </dependencies>
 </metadata>
