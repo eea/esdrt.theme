@@ -1,10 +1,12 @@
 Changelog
 =========
 
-1.10 (UNRELEASED)
+1.10 (2014-10-15)
 --------------------
 
 - Install dependencies [erral]
+
+- Remove confidentiality checks [erral]
 
 1.9 (2014-10-14)
 -------------------
