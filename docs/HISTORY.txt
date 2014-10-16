@@ -4,6 +4,8 @@ Changelog
 1.10 (UNRELEASED)
 --------------------
 
+- Install dependencies [erral]
+
 1.9 (2014-10-14)
 -------------------
 
