@@ -3,6 +3,7 @@ Changelog
 
 1.11 (UNRLEEASED)
 -----------------
+- Update default font [MikelS]
 
 1.10 (2014-10-15)
 --------------------
