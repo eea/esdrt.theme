@@ -68,7 +68,7 @@
                     <a href=""
                        tal:condition="here/can_add_files|nothing"
                        tal:attributes="href string:${reply/absolute_url}/@@copy-attachment-to-answer">
-                       Copy file to answer
+                       Copy file to query
                     </a>
                   </div>
                 </div>
