@@ -21,12 +21,12 @@
   </li>
 </ul>
 <ul id="personalbar-options">
-  <li id="siteaction-about">
+  <!--li id="siteaction-about">
     <a tal:attributes="href view/about;" accesskey="" title="">
-      <span class="eea-icon eea-icon-lg"><!-- --></span>                     
+      <span class="eea-icon eea-icon-lg"></span>                     
        About EEA Review Tool
     </a>
-  </li>
+  </li-->
   <li id="siteaction-help">
     <a tal:attributes="href view/help;" accesskey="" title="">
       <span class="eea-icon eea-icon-lg"><!-- --></span>                     
