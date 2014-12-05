@@ -16,7 +16,9 @@ $(document).ready(function(){
 	});
 	$(".datetimeWF").each(function(){
 		var time = $.trim($(this).text());
-		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss").fromNow())
+        time = moment(time, "YYYY/MM/DD HH:mm:ss").format("YYYY/MM/DD HH:mm:ss")
+        time += " +01:00"
+		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
 
 	/**
