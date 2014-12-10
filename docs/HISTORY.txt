@@ -4,7 +4,7 @@ Changelog
 1.13 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- DateTime showing [MikelS]
 
 
 1.12 (2014-11-25)
