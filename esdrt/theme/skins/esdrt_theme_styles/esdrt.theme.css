@@ -83,7 +83,7 @@ body {
 	/**padding: 2em 1em;*/
 	padding: 0px !important;
 	clear: both;
-	min-width: 973px;	
+	min-width: 973px;
 	height: 10px;
 }
 #portal-personaltools-wrapper{
@@ -122,7 +122,7 @@ body {
 }
 #personalbar-options li a:link,
 #personalbar-options li a:visited,
-#portal-personaltools li a:link, 
+#portal-personaltools li a:link,
 #portal-personaltools li a:visited {
 	background-color: transparent;
 	height: auto;
@@ -132,7 +132,7 @@ body {
 	color: #346f83 !important;
 }
 #personalbar-options li a:hover,
-#portal-personaltools li a:hover{ 
+#portal-personaltools li a:hover{
 	color: #b1c748 !important;
 }
 #portal-globalnav{
@@ -154,7 +154,7 @@ body {
 	margin-top: 0px;
 }
 .discussion .documentByLine {
-	margin-bottom: 0.5em; 
+	margin-bottom: 0.5em;
 	padding: 0px 5px;
 }
 .commentBody {
@@ -176,7 +176,7 @@ body {
 }
 .chosen-choices, .chosen-results {
 	margin-left: 0px !important;
-} 
+}
 .search-choice {
 	margin-bottom: 0px !important;
 	line-height: 13px !important;
@@ -188,20 +188,22 @@ i.observation:before{
 	left: -3px;
 	font-size: 34px;
 }
-#tab-observation-history, 
+#tab-observation-history,
 #tab-workflow,
 #tab-question-chat-room,
+#tab-qa,
 #tab-conclusions,
 #tab-finish-observation,
 #tab-conclusions-phase-1,
 #tab-conclusions-phase-2{
 	width: 100%;
 	padding-left: 0px !important;
-	padding-right: 0px !important;	
+	padding-right: 0px !important;
 }
-#tab-observation-history:before, 
+#tab-observation-history:before,
 #tab-workflow:before,
 #tab-question-chat-room:before,
+#tab-qa:before,
 #tab-conclusions:before,
 #tab-finish-observation:before,
 #tab-conclusions-phase-1:before,
@@ -231,7 +233,8 @@ i.observation:before{
 #tab-workflow:before{
 	content: "\f017";
 }
-#tab-question-chat-room:before {
+#tab-question-chat-room:before,
+#tab-qa:before{
 	content: "\f0e6";
 }
 #tab-finish-observation:before {
