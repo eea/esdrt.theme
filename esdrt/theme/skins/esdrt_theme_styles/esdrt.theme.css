@@ -234,7 +234,7 @@ i.observation:before{
 	content: "\f017";
 }
 #tab-question-chat-room:before,
-#tab-qa:before{
+#tab-qa:before {
 	content: "\f0e6";
 }
 #tab-finish-observation:before {

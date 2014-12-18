@@ -4,7 +4,7 @@ Changelog
 1.14 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Adjust markup of the chat-room tab [erral]
 
 
 1.13 (2014-12-10)
