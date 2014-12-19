@@ -28,7 +28,8 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         self.help = '/'.join([self.portal_state.navigation_root_url(), "help"])
         self.logout = '/'.join([self.portal_state.navigation_root_url(), "logout"])
 
-        self.user_name += ' (%s)' % self.get_groupnames()
+        if hasattr(self, 'user_name'):
+            self.user_name += ' (%s)' % self.get_groupnames()
 
     def get_groupnames(self):
         groupnames = []
