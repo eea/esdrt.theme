@@ -4,7 +4,7 @@ Changelog
 1.16 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Nothing changed. Brown bag release [erral]
 
 
 1.15.1 (2014-12-19)
