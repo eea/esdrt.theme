@@ -4,7 +4,9 @@ Changelog
 1.15 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Show user rolres [erral]
+
+- Show comments bigger [erral]
 
 
 1.14 (2014-12-18)
