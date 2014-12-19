@@ -147,12 +147,6 @@
 
         <fieldset>
 
-            <legend i18n:translate="label_add_comment">Add comment</legend>
-            <p tal:content="view/comment_transform_message">
-                You can add a comment by filling out the form below. Plain text
-                formatting.
-            </p>
-
             <div tal:replace="structure view/form/render" />
 
         </fieldset>
