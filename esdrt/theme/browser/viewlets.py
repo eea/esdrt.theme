@@ -36,24 +36,34 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         user = api.user.get_current()
         groups = user.getGroups()
         for group in groups:
-            groupitem = api.group.get(group)
-            name = groupitem.getProperty('title')
-            if name.strip():
-                groupnames.append(name)
-            else:
-                if group.startswith('extranet-esd-ghginv-sr-'):
+            if group.startswith('extranet-esd-ghginv-sr-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-ghginv-sr-', '')
                     splitted_name = new_name.split('-')
                     if len(splitted_name) == 2:
                         groupnames.append('Sector Expert - %s - %s' % (
                             splitted_name[0], splitted_name[1].upper())
                         )
-                elif group.startswith('extranet-esd-ghginv-qualityexpert-'):
+            elif group.startswith('extranet-esd-ghginv-qualityexpert-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-ghginv-qualityexpert-', '')
                     if new_name.strip():
                         groupnames.append('Quality Expert - %s' % new_name)
 
-                elif group.startswith('extranet-esd-esdreview-reviewexp-'):
+            elif group.startswith('extranet-esd-esdreview-reviewexp-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-esdreview-reviewexp-', '')
                     splitted_name = new_name.split('-')
                     if len(splitted_name) == 2:
@@ -61,17 +71,32 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
                             splitted_name[0], splitted_name[1].upper())
                         )
 
-                elif group.startswith('extranet-esd-esdreview-leadreview-'):
+            elif group.startswith('extranet-esd-esdreview-leadreview-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-esdreview-leadreview-', '')
                     if new_name.strip():
                         groupnames.append('Quality Expert - %s' % new_name.upper())
 
-                elif group.startswith('extranet-esd-countries-msa-'):
+            elif group.startswith('extranet-esd-countries-msa-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-countries-msa-', '')
                     if new_name.strip():
                         groupnames.append('MS Coordinator - %s' % new_name.upper())
 
-                elif group.startswith('extranet-esd-countries-msexpert-'):
+            elif group.startswith('extranet-esd-countries-msexpert-'):
+                groupitem = api.group.get(group)
+                name = groupitem.getProperty('title')
+                if name.strip():
+                    groupnames.append(name)
+                else:
                     new_name = group.replace('extranet-esd-countries-msexpert-', '')
                     if new_name.strip():
                         groupnames.append('MS Expert - %s' % new_name.upper())
