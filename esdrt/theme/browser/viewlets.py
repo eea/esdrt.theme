@@ -35,42 +35,46 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         groupnames = []
         user = api.user.get_current()
         groups = user.getGroups()
-
         for group in groups:
-            if group.startswith('extranet-esd-ghginv-sr-'):
-                new_name = group.replace('extranet-esd-ghginv-sr-', '')
-                splitted_name = new_name.split('-')
-                if len(splitted_name) == 2:
-                    groupnames.append('Sector Expert - %s - %s' % (
-                        splitted_name[0], splitted_name[1].upper())
-                    )
-            elif group.startswith('extranet-esd-ghginv-qualityexpert-'):
-                new_name = group.replace('extranet-esd-ghginv-qualityexpert-', '')
-                if new_name.strip():
-                    groupnames.append('Quality Expert - %s' % new_name)
+            groupitem = api.group.get(group)
+            name = groupitem.getProperty('title')
+            if name.strip():
+                groupnames.append(name)
+            else:
+                if group.startswith('extranet-esd-ghginv-sr-'):
+                    new_name = group.replace('extranet-esd-ghginv-sr-', '')
+                    splitted_name = new_name.split('-')
+                    if len(splitted_name) == 2:
+                        groupnames.append('Sector Expert - %s - %s' % (
+                            splitted_name[0], splitted_name[1].upper())
+                        )
+                elif group.startswith('extranet-esd-ghginv-qualityexpert-'):
+                    new_name = group.replace('extranet-esd-ghginv-qualityexpert-', '')
+                    if new_name.strip():
+                        groupnames.append('Quality Expert - %s' % new_name)
 
-            elif group.startswith('extranet-esd-esdreview-reviewexp-'):
-                new_name = group.replace('extranet-esd-esdreview-reviewexp-', '')
-                splitted_name = new_name.split('-')
-                if len(splitted_name) == 2:
-                    groupnames.append('Review Expert - %s - %s' % (
-                        splitted_name[0], splitted_name[1].upper())
-                    )
+                elif group.startswith('extranet-esd-esdreview-reviewexp-'):
+                    new_name = group.replace('extranet-esd-esdreview-reviewexp-', '')
+                    splitted_name = new_name.split('-')
+                    if len(splitted_name) == 2:
+                        groupnames.append('Review Expert - %s - %s' % (
+                            splitted_name[0], splitted_name[1].upper())
+                        )
 
-            elif group.startswith('extranet-esd-esdreview-leadreview-'):
-                new_name = group.replace('extranet-esd-esdreview-leadreview-', '')
-                if new_name.strip():
-                    groupnames.append('Quality Expert - %s' % new_name.upper())
+                elif group.startswith('extranet-esd-esdreview-leadreview-'):
+                    new_name = group.replace('extranet-esd-esdreview-leadreview-', '')
+                    if new_name.strip():
+                        groupnames.append('Quality Expert - %s' % new_name.upper())
 
-            elif group.startswith('extranet-esd-countries-msa-'):
-                new_name = group.replace('extranet-esd-countries-msa-', '')
-                if new_name.strip():
-                    groupnames.append('MS Coordinator - %s' % new_name.upper())
+                elif group.startswith('extranet-esd-countries-msa-'):
+                    new_name = group.replace('extranet-esd-countries-msa-', '')
+                    if new_name.strip():
+                        groupnames.append('MS Coordinator - %s' % new_name.upper())
 
-            elif group.startswith('extranet-esd-countries-msexpert-'):
-                new_name = group.replace('extranet-esd-countries-msexpert-', '')
-                if new_name.strip():
-                    groupnames.append('MS Expert - %s' % new_name.upper())
+                elif group.startswith('extranet-esd-countries-msexpert-'):
+                    new_name = group.replace('extranet-esd-countries-msexpert-', '')
+                    if new_name.strip():
+                        groupnames.append('MS Expert - %s' % new_name.upper())
 
         return ', '.join(groupnames)
 
