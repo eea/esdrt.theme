@@ -4,7 +4,7 @@ Changelog
 1.15.4 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add dependencies previously handled by buildout [erral]
 
 
 1.15.3 (2015-01-19)

@@ -24,11 +24,18 @@ setup(name='esdrt.theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          # -*- Extra requirements: -*-
           'setuptools',
           'z3c.jbot',
           'five.grok',
           'eea.icons',
-          # -*- Extra requirements: -*-
+          'esdrt.content',
+          'plone.app.ldap',
+          'python-ldap',
+          'Products.LDAPMultiPlugins',
+          'Products.LDAPUserFolder',
+          'Products.Collage',
+          'eea.controlpanel',
       ],
       entry_points="""
       # -*- Entry points: -*-
