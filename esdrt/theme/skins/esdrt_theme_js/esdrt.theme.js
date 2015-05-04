@@ -16,9 +16,10 @@ $(document).ready(function(){
 	});
 	$(".datetimeWF").each(function(){
 		var time = $.trim($(this).text());
-        time = moment(time, "YYYY/MM/DD HH:mm:ss").format("YYYY/MM/DD HH:mm:ss")
-        time += " +01:00"
-		$(this).text(moment(time, "YYYY/MM/DD HH:mm:ss Z").fromNow())
+        var timeAgo = moment(time, "YYYY/MM/DD HH:mm:ss").format("YYYY/MM/DD HH:mm:ss")
+        var timeZone = time.substr(time.indexOf("+", time.length))
+        timeAgo += " +0" + timeZone + ":00"
+		$(this).text(moment(timeAgo, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
 
 	/**
