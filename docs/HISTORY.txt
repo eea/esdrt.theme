@@ -4,7 +4,10 @@ Changelog
 1.15.6 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- add items suggested by check-manifest [erral]
+
+- remove ldap-related dependencies from setup.py. Refs #25802 [erral]
+
 
 
 1.15.5 (2015-05-07)
