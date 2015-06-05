@@ -1,10 +1,16 @@
 Changelog
 =========
 
-1.15.5 (unreleased)
+1.15.6 (unreleased)
 -------------------
 
 - Nothing changed yet.
+
+
+1.15.5 (2015-05-07)
+-------------------
+
+- Ticket #24552: Fix observation history
 
 
 1.15.4 (2015-03-10)
