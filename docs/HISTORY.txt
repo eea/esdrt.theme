@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.15.6 (unreleased)
--------------------
+1.16 (2015-06-05)
+-----------------
 
 - add items suggested by check-manifest [erral]
 
