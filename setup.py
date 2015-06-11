@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.15.6.dev0'
+version = '1.17.dev0'
 
 setup(name='esdrt.theme',
       version=version,
@@ -30,10 +30,6 @@ setup(name='esdrt.theme',
           'five.grok',
           'eea.icons',
           'esdrt.content',
-          'plone.app.ldap',
-          'python-ldap',
-          'Products.LDAPMultiPlugins',
-          'Products.LDAPUserFolder',
           'Products.Collage',
           'eea.controlpanel',
       ],

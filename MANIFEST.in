@@ -1,2 +1,7 @@
 recursive-include esdrt *
 global-exclude *pyc
+include *.in
+include *.txt
+include *.zcml
+recursive-include docs *.GPL
+recursive-include docs *.txt
