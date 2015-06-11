@@ -21,7 +21,9 @@ $(document).ready(function(){
         timeAgo += " +0" + timeZone + ":00"
 		$(this).text(moment(timeAgo, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
-
+    if ($("body").hasClass("portaltype-observation")){
+        $("<br>").insertBefore($("input[value='recalc-prev']").parent())
+    }
 	/**
 	 * Observation table sorter
 	*/
