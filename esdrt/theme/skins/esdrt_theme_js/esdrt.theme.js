@@ -21,7 +21,7 @@ $(document).ready(function(){
         timeAgo += " +0" + timeZone + ":00"
 		$(this).text(moment(timeAgo, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
-    if ($("body").hasClass("portaltype-observation")){
+    if ($("body").hasClass("template-esdrt-content-observation")){
         $("<br>").insertBefore($("input[value='recalc-prev']").parent())
     }
 	/**
