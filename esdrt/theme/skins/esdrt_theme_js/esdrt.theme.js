@@ -24,6 +24,7 @@ $(document).ready(function(){
     if ($("body").hasClass("template-esdrt-content-observation") || $("body").hasClass("template-esdrt-content-conclusion")){
         $("<br>").insertBefore($("input[value='recalc-prev']").parent())
     }
+    $('a.standardButton[title][title!=]').addClass("tooltipIcon")
 	/**
 	 * Observation table sorter
 	*/
