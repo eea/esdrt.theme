@@ -4,7 +4,9 @@ Changelog
 1.17 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Ticket #22167: Split key flags in two lines [MikelS]
+
+- Ticket #26252: Tooltip icon info [MikelS]
 
 
 1.16 (2015-06-05)
