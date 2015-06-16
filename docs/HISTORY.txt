@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.17 (unreleased)
+1.17 (2015-06-16)
 -----------------
 
 - Ticket #22167: Split key flags in two lines [MikelS]
