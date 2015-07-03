@@ -52,8 +52,8 @@
                     </tal:name>
                     <tal:posted i18n:translate="label_says">says:</tal:posted>
                     <div class="commentDate"
-                         tal:content="python:view.format_time(reply.modification_date)">
-                         8/23/2001 12:40:44 PM
+                         tal:content="python:reply.modification_date.strftime('%d %b %Y, %H:%M CET')">
+                         8/23/2001 12:40:44 
                     </div>
                 </div>
 
