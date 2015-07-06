@@ -27,82 +27,73 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         self.about = '/'.join([self.portal_state.navigation_root_url(), "info"])
         self.help = '/'.join([self.portal_state.navigation_root_url(), "help"])
         self.logout = '/'.join([self.portal_state.navigation_root_url(), "logout"])
-
         if hasattr(self, 'user_name'):
-            self.user_name += ' (%s)' % self.get_groupnames()
+            self.user_roles = self.get_groupnames()
+
+        #if hasattr(self, 'user_name'):
+        #    self.user_name += ' (%s)' % self.get_groupnames()
+        #    #self.user_name += ' (%s)' % get_category_ldap_from_crf_code("2C4")
 
     def get_groupnames(self):
-        groupnames = []
+        groupnames = {}
         user = api.user.get_current()
         groups = user.getGroups()
+        sector_review_roles = []
+        quality_expert_roles = []
+        review_expert_roles = []
+        lead_review_roles = []
+        ms_coordinator_roles = []
+        ms_expert_roles = []
         for group in groups:
             if group.startswith('extranet-esd-ghginv-sr-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-ghginv-sr-', '')
-                    splitted_name = new_name.split('-')
-                    if len(splitted_name) == 2:
-                        groupnames.append('Sector Expert - %s - %s' % (
-                            splitted_name[0], splitted_name[1].upper())
-                        )
+                new_name = group.replace('extranet-esd-ghginv-sr-', '')
+                splitted_name = new_name.split('-')
+                if len(splitted_name) == 2:
+                    sector_review_roles.append('%s - %s' % (
+                                                    self.get_country_name(splitted_name[1]), splitted_name[0])
+                                                )
+
             elif group.startswith('extranet-esd-ghginv-qualityexpert-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-ghginv-qualityexpert-', '')
-                    if new_name.strip():
-                        groupnames.append('Quality Expert - %s' % new_name)
+                new_name = group.replace('extranet-esd-ghginv-qualityexpert-', '')
+                if new_name.strip():
+                    quality_expert_roles.append('%s' % new_name)
 
             elif group.startswith('extranet-esd-esdreview-reviewexp-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-esdreview-reviewexp-', '')
-                    splitted_name = new_name.split('-')
-                    if len(splitted_name) == 2:
-                        groupnames.append('Review Expert - %s - %s' % (
-                            splitted_name[0], splitted_name[1].upper())
-                        )
+                new_name = group.replace('extranet-esd-esdreview-reviewexp-', '')
+                splitted_name = new_name.split('-')
+                if len(splitted_name) == 2:
+                    review_expert_roles.append('%s - %s' % (
+                        splitted_name[0], self.get_country_name(splitted_name[1]))
+                    )
 
             elif group.startswith('extranet-esd-esdreview-leadreview-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-esdreview-leadreview-', '')
-                    if new_name.strip():
-                        groupnames.append('Quality Expert - %s' % new_name.upper())
+                new_name = group.replace('extranet-esd-esdreview-leadreview-', '')
+                if new_name.strip():
+                    lead_review_roles.append('%s' % self.get_country_name(new_name))
 
             elif group.startswith('extranet-esd-countries-msa-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-countries-msa-', '')
-                    if new_name.strip():
-                        groupnames.append('MS Coordinator - %s' % new_name.upper())
+                new_name = group.replace('extranet-esd-countries-msa-', '')
+                if new_name.strip():
+                    ms_coordinator_roles.append('%s' % self.get_country_name(new_name))
 
             elif group.startswith('extranet-esd-countries-msexpert-'):
-                groupitem = api.group.get(group)
-                name = groupitem.getProperty('title')
-                if name.strip():
-                    groupnames.append(name)
-                else:
-                    new_name = group.replace('extranet-esd-countries-msexpert-', '')
-                    if new_name.strip():
-                        groupnames.append('MS Expert - %s' % new_name.upper())
+                new_name = group.replace('extranet-esd-countries-msexpert-', '')
+                if new_name.strip():
+                    ms_expert_roles.append('%s' % self.get_country_name(new_name))
 
-        return ', '.join(groupnames)
-
+        sector_review_roles.sort()
+        groupnames["sector_review_roles"] = sector_review_roles
+        quality_expert_roles.sort()
+        groupnames["quality_expert_roles"] = quality_expert_roles
+        review_expert_roles.sort()
+        groupnames["review_expert_roles"] = review_expert_roles
+        lead_review_roles.sort()
+        groupnames["lead_review_roles"] = lead_review_roles
+        ms_coordinator_roles.sort()
+        groupnames["ms_coordinator_roles"] = ms_coordinator_roles
+        ms_expert_roles.sort()
+        groupnames["ms_expert_roles"] = ms_expert_roles
+        return groupnames
 
 class ProductVersionViewlet(common.ViewletBase):
     """A viewlet which informs about the Product versions

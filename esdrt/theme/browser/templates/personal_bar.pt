@@ -63,6 +63,53 @@
             </a>
         </li>
     </ul>
+    <ul id="rolesList">  
+        <!--div tal:content="view/user_roles"></div-->      
+        <tal:block define="sr view/user_roles/sector_review_roles"
+          condition="sr">
+          <span>Sector review</span>
+          <li tal:repeat="role sr"
+            tal:content="role">
+          </li>          
+        </tal:block>
+        <tal:block define="qe view/user_roles/quality_expert_roles"
+          condition="qe">
+          <span>Quality expert</span>
+          <li tal:repeat="role qe"
+            tal:content="role">
+          </li>          
+        </tal:block>
+        <tal:block define="re view/user_roles/review_expert_roles"
+          condition="re">
+          <span>Review expert</span>
+          <li tal:repeat="role re"
+            tal:content="role">
+          </li>          
+        </tal:block>   
+        <tal:block define="lr view/user_roles/lead_review_roles"
+          condition="lr">
+          <span>Lead review</span>
+          <li tal:repeat="role lr"
+            tal:content="role">
+          </li>          
+        </tal:block>    
+        <tal:block define="msc view/user_roles/ms_coordinator_roles"
+          condition="msc">
+          <span>Member state coordinator</span>
+          <li tal:repeat="role msc"
+            tal:content="role">
+          </li>          
+        </tal:block>     
+        <tal:block define="mse view/user_roles/ms_expert_roles"
+          condition="mse">
+          <span>Member state expert</span>
+          <li tal:repeat="role mse"
+            tal:content="role">
+          </li>          
+        </tal:block>
+
+   
+    </ul>
   </dd>
   </tal:block>
 </dl>
