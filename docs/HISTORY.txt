@@ -4,7 +4,7 @@ Changelog
 1.18 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Ticket #20628: Show logged in role.  [MikelS]
 
 
 1.17 (2015-06-16)
