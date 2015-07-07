@@ -80,7 +80,6 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
                 new_name = group.replace('extranet-esd-countries-msexpert-', '')
                 if new_name.strip():
                     ms_expert_roles.append('%s' % self.get_country_name(new_name))
-
         sector_review_roles.sort()
         groupnames["sector_review_roles"] = sector_review_roles
         quality_expert_roles.sort()
@@ -93,7 +92,71 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         groupnames["ms_coordinator_roles"] = ms_coordinator_roles
         ms_expert_roles.sort()
         groupnames["ms_expert_roles"] = ms_expert_roles
+
+
         return groupnames
+
+    def get_country_name(self, countryCode):
+        if countryCode == "at":
+            return "Austria"
+        elif countryCode == "be":
+            return "Belgium"
+        elif countryCode == "bg":
+            return "Bulgaria"
+        elif countryCode == "hr":
+            return "Croatia"
+        elif countryCode == "cy":
+            return "Cyprus"
+        elif countryCode == "cz":
+            return "Czech Republic"
+        elif countryCode == "dk":
+            return "Denmark"
+        elif countryCode == "ee":
+            return "Estonia"
+        elif countryCode == "fi":
+            return "Finland"
+        elif countryCode == "fr":
+            return "France"
+        elif countryCode == "de":
+            return "Germany"
+        elif countryCode == "gr":
+            return "Greece"
+        elif countryCode == "hu":
+            return "Hungary"
+        elif countryCode == "is":
+            return "Iceland"
+        elif countryCode == "ie":
+            return "Ireland"
+        elif countryCode == "it":
+            return "Italy"
+        elif countryCode == "lv":
+            return "Latvia"
+        elif countryCode == "lt":
+            return "Lithuania"
+        elif countryCode == "lu":
+            return "Luxembourg"
+        elif countryCode == "mt":
+            return "Malta"
+        elif countryCode == "nl":
+            return "Netherlands"
+        elif countryCode == "pl":
+            return "Poland"
+        elif countryCode == "pt":
+            return "Portugal"
+        elif countryCode == "ro":
+            return "Romania"
+        elif countryCode == "sk":
+            return "Slovakia"
+        elif countryCode == "sl":
+            return "Slovania"
+        elif countryCode == "es":
+            return "Spain"
+        elif countryCode == "se":
+            return "Sweden"
+        elif countryCode == "uk":
+            return "United Kingdom"
+        else:
+            return countryCode
 
 class ProductVersionViewlet(common.ViewletBase):
     """A viewlet which informs about the Product versions
