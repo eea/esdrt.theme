@@ -11,6 +11,15 @@ $(document).ready(function(){
         }
         $(this).toggleClass("collapsed");
     });
+    $(".collapsibleListTitle").click(function(e){
+        var list = $(this).data("list");
+        if ($(this).hasClass("collapsed")){
+            $("."+list).show();
+        }else{
+            $("."+list).hide();
+        }
+        $(this).toggleClass("collapsed");
+    });
 	$(".clickableRow").click(function() {
 	    window.document.location = $(this).data("href");
 	});
