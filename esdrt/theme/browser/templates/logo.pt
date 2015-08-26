@@ -1,6 +1,6 @@
 <div id="header-holder">
   <div id="header">
-    <h1>EEA Review Tool</h1>
+    <h1>EEA Emission Review Tool (EMRT)</h1>
     <div id="eea-logo-holder">
       <a href="http://www.eea.europa.eu/" target="_blank" title="European Environmental Agency">
         <img src="eea.gif" alt="European Environmental Agency"/>
