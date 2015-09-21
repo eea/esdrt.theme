@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.23.1'
+version = '1.23.2.dev0'
 
 setup(name='esdrt.theme',
       version=version,
