@@ -41,11 +41,11 @@
         class=".viewlets.PersonalBarViewlet"
         permission="zope.Public"
         />     
-    <browser:viewlet
+    <!--browser:viewlet
         name="esdrt.productversion"
         manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
         class=".viewlets.ProductVersionViewlet"
         permission="zope.Public"
         template="templates/product_version.pt"
-        />              
+        /-->              
 </configure>

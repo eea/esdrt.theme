@@ -158,10 +158,10 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
         else:
             return countryCode
 
-class ProductVersionViewlet(common.ViewletBase):
-    """A viewlet which informs about the Product versions
-    """
+#class ProductVersionViewlet(common.ViewletBase):
+    #"""A viewlet which informs about the Product versions
+    #"""
 
-    def get_version(self):
-        qi = getToolByName(self.context, 'portal_quickinstaller')
-        return '-'.join([qi.getProductVersion("esdrt.content"), qi.getProductVersion("esdrt.theme")])
+    #def get_version(self):
+        #qi = getToolByName(self.context, 'portal_quickinstaller')
+        #return '-'.join([qi.getProductVersion("esdrt.content"), qi.getProductVersion("esdrt.theme")])
