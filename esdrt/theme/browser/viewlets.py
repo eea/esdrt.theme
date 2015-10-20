@@ -153,7 +153,7 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
             return "Spain"
         elif countryCode == "se":
             return "Sweden"
-        elif countryCode == "uk":
+        elif countryCode == "gb":
             return "United Kingdom"
         else:
             return countryCode
