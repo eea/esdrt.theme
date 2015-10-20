@@ -4,7 +4,7 @@ Changelog
 1.23.2 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Task #29850: Links to the observation are restricted
 
 
 1.23.1 (2015-09-21)
