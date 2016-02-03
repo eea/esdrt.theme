@@ -21,7 +21,8 @@ $(document).ready(function(){
         $(this).toggleClass("collapsed");
     });
 	$(".clickableRow").click(function() {
-	    window.document.location = $(this).data("href");
+	    //window.document.location = $(this).data("href");
+        window.open($(this).data("href"), "_blank");
 	});
 	$(".datetimeWF").each(function(){
 		var time = $.trim($(this).text());
@@ -30,10 +31,22 @@ $(document).ready(function(){
         timeAgo += " +0" + timeZone + ":00"
 		$(this).text(moment(timeAgo, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
-    if ($("body").hasClass("template-esdrt-content-observation") || $("body").hasClass("template-esdrt-content-conclusion")){
-        $("<br>").insertBefore($("input[value='recalc-prev']").parent())
+    if ($("body").hasClass("template-esdrt-content-observation") || 
+        $("body").hasClass("template-esdrt-content-conclusion") ||
+        $("body").hasClass("template-edit-highlights") ||
+        $("body").hasClass("template-edit portaltype-conclusion")){
+        $("<br/><br/><span style='font-weight:bold'>Draft/final conclusion flags</span><br/>").insertBefore($("input[value='psi']").parent())
     }
     $('a.standardButton[title][title!=]').addClass("tooltipIcon")
+    if ($("body").hasClass("section-2015")) {
+        $("#form-widgets-closing_reason option[value*='2016']").each(function() {
+            $(this).remove();
+        });
+    }else {
+        $("#form-widgets-closing_reason :not(option[value*='2016'])").each(function() {
+            $(this).remove();
+        });        
+    }
 	/**
 	 * Observation table sorter
 	*/
