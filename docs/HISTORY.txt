@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.26 (unreleased)
+1.26 (2016-02-03)
 -----------------
 
 - Nothing changed yet.
