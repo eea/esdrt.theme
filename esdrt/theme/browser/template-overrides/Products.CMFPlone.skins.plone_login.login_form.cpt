@@ -276,15 +276,16 @@
 
             <div id="login-forgotten-password"
                  tal:condition="python:mail_password_url and use_normal">
-                <strong i18n:translate="box_forgot_password_option">
-                    Forgot your password?
-                </strong>
-                <p class="discreet"
-                   i18n:translate="help_password_retrieval">
-                    If you have forgotten your password,
-                    <span i18n:name="click_here">
-                        <a href="http://www.eionet.europa.eu/password-reset">you can reset it here</a></span>.
-                </p>
+
+              <p class="discreet">
+                <span i18n:translate="account_needed">
+                  If you do not have a username and password, please contact the ESD review secretariat: <a i18n:name="esd_secretariat_email" href="mailto:ESD.review@eea.europa.eu">ESD.review@eea.europa.eu</a>
+                </span><br/>
+                <span i18n:translate="help_password_retrieval">
+                  If you forgot your password, you can obtain a new one:
+                  <a i18n:name="click_here" href="http://www.eionet.europa.eu/password-reset">http://www.eionet.europa.eu/password-reset</a>.
+                </span>
+              </p>
             </div>
 
             <div id="login-new-user"
