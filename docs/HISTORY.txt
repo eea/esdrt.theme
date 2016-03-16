@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.27 (unreleased)
+1.27 (2016-03-16)
 -----------------
 
 - Refs #70377 message improvements on login page [nituacor]
