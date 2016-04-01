@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.28.dev (unreleased)
+1.28 (2016-04-01)
 -----------------
-- Nothing changed yet.
+- Fix a small js bug.
+  [lucas]
 
 
 1.27 (2016-03-16)
