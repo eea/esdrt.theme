@@ -31,7 +31,7 @@ $(document).ready(function(){
         timeAgo += " +0" + timeZone + ":00"
 		$(this).text(moment(timeAgo, "YYYY/MM/DD HH:mm:ss Z").fromNow())
 	})
-    if ($("body").hasClass("template-esdrt-content-observation") || 
+    if ($("body").hasClass("template-esdrt-content-observation") ||
         $("body").hasClass("template-esdrt-content-conclusion") ||
         $("body").hasClass("template-edit-highlights") ||
         $("body").hasClass("template-edit portaltype-conclusion")){
@@ -42,10 +42,10 @@ $(document).ready(function(){
         $("#form-widgets-closing_reason option[value*='2016']").each(function() {
             $(this).remove();
         });
-    }else {
+    }else if (!$("body").hasClass("portaltype-conclusionsphase2")){
         $("#form-widgets-closing_reason :not(option[value*='2016'])").each(function() {
             $(this).remove();
-        });        
+        });
     }
 	/**
 	 * Observation table sorter
@@ -92,7 +92,7 @@ $(document).ready(function(){
         var vals = [];
         for (var i = 0; i < rows.length; i+=2) {
             //var record = [rows.get(i), rows.get(i+1)]; //Record is two rows.
-            var record = [rows.get(i)]; 
+            var record = [rows.get(i)];
 
             if ($(record[r].children[c]).data("sorter") != undefined){
             	var sub = $(record[r].children[c]).data("sorter");
@@ -152,5 +152,5 @@ $(document).ready(function(){
 		}else{
 			$(".observationList tbody tr").eq(r + 1).removeClass("hover");
 		}
-    }	  */   
+    }	  */
 });
