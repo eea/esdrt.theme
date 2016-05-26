@@ -37,7 +37,8 @@ $(document).ready(function(){
         $("body").hasClass("template-edit portaltype-conclusion")){
         $("<br/><br/><span style='font-weight:bold'>Draft/final conclusion flags</span><br/>").insertBefore($("input[value='psi']").parent())
     }
-    $('a.standardButton[title][title!=""]').addClass("tooltipIcon")
+    $('a.standardButton[title][title!=""]').addClass("tooltipIcon");
+    /*
     if ($("body").hasClass("section-2015")) {
         $("#form-widgets-closing_reason option[value*='2016']").each(function() {
             $(this).remove();
@@ -46,7 +47,7 @@ $(document).ready(function(){
         $("#form-widgets-closing_reason :not(option[value*='2016'])").each(function() {
             $(this).remove();
         });
-    }
+    }*/
 	/**
 	 * Observation table sorter
 	*/
