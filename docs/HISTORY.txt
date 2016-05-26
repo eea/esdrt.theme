@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.30 (unrelease)
+1.30 (2016-05-26)
 -----------------
 
-- Nothing changed yet.
+- refs #72740, #72748 fix js on observation and conclusion
+  [lucas]
 
 1.29 (2016-04-20)
 -----------------
