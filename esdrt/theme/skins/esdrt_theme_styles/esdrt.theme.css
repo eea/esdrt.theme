@@ -240,3 +240,13 @@ i.observation:before{
 #tab-finish-observation:before {
 	content: "\f023";
 }
+.ordered-selection-field button{
+	margin: 5px 8px 5px 10px;
+	font-size: 20px;
+	width: 30px;
+    height: 30px;
+    background-color: #38758a;
+    color: #fff;
+    border: 1px solid #346F83;
+    font-weight: bold;
+}

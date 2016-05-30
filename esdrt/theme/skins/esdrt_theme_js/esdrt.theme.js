@@ -4,13 +4,20 @@ function hightlight_restructured(){
         $("body").hasClass("template-edit-highlights") ||
         $("body").hasClass("template-edit portaltype-conclusion") ||
         $("body").hasClass("template-esdrt-content-conclusion") ||
+        $("body").hasClass("template-esdrt-content-conclusionsphase2") ||
         $("body").hasClass("template-edit portaltype-conclusionsphase2") ||
         $("body").hasClass("template-view portaltype-observation")){
             $("<br/><br/><span style='font-weight:bold'>Draft/final conclusion flags</span><br/>").insertBefore($("input[value='psi']").parent())
     }
 }
+function redirect_export(){
+    location.href = $('input#form-widgets-come_from').attr('value');
+}
 
 $(document).ready(function(){
+    $('form#export-observation-form').submit(function(){
+       setTimeout(redirect_export, 5000);
+    });
     $(".collapsiblePanelTitle").click(function(e){
         var panel = $(this).data("panel");
         if ($(this).hasClass("collapsed")){
