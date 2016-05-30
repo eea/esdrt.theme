@@ -10,14 +10,9 @@ function hightlight_restructured(){
             $("<br/><br/><span style='font-weight:bold'>Draft/final conclusion flags</span><br/>").insertBefore($("input[value='psi']").parent())
     }
 }
-function redirect_export(){
-    location.href = $('input#form-widgets-come_from').attr('value');
-}
 
 $(document).ready(function(){
-    $('form#export-observation-form').submit(function(){
-       setTimeout(redirect_export, 5000);
-    });
+
     $(".collapsiblePanelTitle").click(function(e){
         var panel = $(this).data("panel");
         if ($(this).hasClass("collapsed")){
