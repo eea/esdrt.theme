@@ -250,3 +250,6 @@ i.observation:before{
     border: 1px solid #346F83;
     font-weight: bold;
 }
+.observationRefCell a span{
+	display: block;
+}
