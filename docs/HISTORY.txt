@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.33 (unreleased)
+1.33 (2017-01-25)
 -----------------
 
 - [refs #81024] Use portal title instead of hardcoded string in logo.pt.
