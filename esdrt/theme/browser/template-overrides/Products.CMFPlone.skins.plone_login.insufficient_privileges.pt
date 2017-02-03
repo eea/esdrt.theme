@@ -15,8 +15,9 @@
 
       <div class="documentDescription" i18n:translate="description_no_privileges_for_page">
       You do not have sufficient privileges to view this page. If you believe
-      you are receiving this message in error, contact the
-      <span><a href="mailto:ESD.TechnicalReview@eea.europa.eu">EEA review secretariat</a></span>.
+      you are receiving this message in error, contact the EEA review secretariat at:
+      <a tal:attributes="href string:mailto:${context/MailHost/email_from_address}"
+         tal:content="context/MailHost/email_from_address" />.
       </div>
 </metal:main>
 

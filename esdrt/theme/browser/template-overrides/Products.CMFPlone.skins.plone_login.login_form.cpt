@@ -279,8 +279,10 @@
 
               <p class="discreet">
                 <span i18n:translate="account_needed">
-                  If you do not have a username and password, please contact the ESD review secretariat: <a i18n:name="esd_secretariat_email" href="mailto:ESD.review@eea.europa.eu">ESD.review@eea.europa.eu</a>
-                </span><br/>
+                  If you do not have a username and password, please contact the EEA review secretariat at:
+                 <a tal:attributes="href string:mailto:${context/MailHost/email_from_address}"
+                    tal:content="context/MailHost/email_from_address" />.
+                </span><br/><br/>
                 <span i18n:translate="help_password_retrieval">
                   If you forgot your password, you can obtain a new one:
                   <a i18n:name="click_here" href="http://www.eionet.europa.eu/password-reset">http://www.eionet.europa.eu/password-reset</a>.
