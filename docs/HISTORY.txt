@@ -4,7 +4,7 @@ Changelog
 1.34 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- [refs #81676] Remove hard coded email addresses. [nituacor]
 
 
 1.33 (2017-01-25)
