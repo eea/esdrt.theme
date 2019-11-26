@@ -14,8 +14,7 @@ body {
 }
 #portal-column-content > div{
 	margin: 0px auto;
-	min-width: 995px;
-	max-width: 1024px;
+	max-width: 95%;
 }
 #header-holder {
 	width: 100%;
@@ -34,8 +33,7 @@ body {
 }
 #header{
 	margin: 0 auto;
-	min-width: 995px;
-	max-width: 1024px;
+  max-width: 95%;
 	padding-top: 12px;
 }
 #header h1{
@@ -136,8 +134,7 @@ body {
 	color: #b1c748 !important;
 }
 #portal-globalnav{
-	min-width: 995px;
-	max-width: 1024px;
+  max-width: 95%;
 	margin: 0 auto 1em auto;
 }
 .portaltype-question .observationDetailsRow{
