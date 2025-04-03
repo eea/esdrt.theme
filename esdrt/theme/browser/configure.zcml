@@ -7,7 +7,7 @@
 
     <browser:jbot
         directory="overrides"
-        layer=".interfaces.IThemeSpecific" />
+        layer="esdrt.theme.interfaces.IEsdrtThemeLayer" />
 
     <configure package="plone.app.layout.viewlets">
         <browser:viewletManager
