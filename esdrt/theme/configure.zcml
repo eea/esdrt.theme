@@ -1,17 +1,40 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="esdrt.theme">
 
-   <includeDependencies package="." />
-   <i18n:registerTranslations directory="locales" />
-   <grok:grok package="." />
+  <i18n:registerTranslations directory="locales"/>
 
-   <include package=".browser" />
+  <include package=".browser"/>
 
-   <include file="skins.zcml" />
-   <include file="profiles.zcml" />
-   <include package=".upgrades" />
+  <genericsetup:registerProfile
+      name="default"
+      title="esdrt.theme"
+      directory="profiles/default"
+      description="Installs the esdrt.theme add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+  />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="esdrt.theme (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the esdrt.theme add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+  />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="esdrt.theme-hiddenprofiles"
+  />
+
+  <plone:static
+      directory="theme"
+      type="theme"
+      name="esdrt-theme"
+  />
 
 </configure>

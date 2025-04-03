@@ -1,1 +1,0 @@
-Drop here the overrides of plone templates using the dotted name notation

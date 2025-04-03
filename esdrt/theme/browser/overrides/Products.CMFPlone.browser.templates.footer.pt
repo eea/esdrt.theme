@@ -1,0 +1,3 @@
+<div i18n:domain="plone" id="portal-footer" style="height: auto;">
+<span style="color: white; padding: 1em;">For assistance <a href="mailto:eea-inventories@eea.europa.eu" style="color:white;text-decoration:underline;">contact the EEA Secretariat</a>. <a href="https://www.eionet.europa.eu/gdpr/" style="color:white;text-decoration:underline;">Privacy statement</a></span>
+</div>

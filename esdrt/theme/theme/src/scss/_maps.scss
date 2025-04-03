@@ -1,0 +1,26 @@
+$theme-plone-colors: (
+  "link-color-on-dark": $secondary,
+  "link-hover-color": $tertiary,
+);
+
+$plone-colors: map-merge($plone-colors, $theme-plone-colors);
+
+$theme-state-colors: (
+  "published": $primary,
+);
+
+$state-colors: map-merge($state-colors, $theme-state-colors);
+
+$theme-container-max-widths: (
+  xxxl: 1560px,
+  xxxxl: 1740px
+);
+
+$container-max-widths: map-merge($container-max-widths, $theme-container-max-widths);
+
+$theme-grid-breakpoints: (
+  xxxl: 1600px,
+  xxxxl: 1800px
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $theme-grid-breakpoints);

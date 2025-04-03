@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone"
+      metal:use-macro="here/main_template/macros/master"
+>
+<body>
+  <metal:main fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+      <div class="login-wrapper">
+
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title h5"
+                tal:content="view/label | nothing" />
+
+            <div id="login-form">
+
+              <div class="alert alert-danger pat-cookietrigger" style="display:none">
+                <strong i18n:translate="">
+                  Error
+                </strong>
+                <span tal:omit-tag=""
+                  i18n:translate="enable_cookies_message_before_login">
+                  Cookies are not enabled. You must enable cookies before you can log in.
+                </span>
+              </div>
+              <metal:form use-macro="context/@@ploneform-macros/titlelessform" />
+
+              <div class="footer mt-4"
+                  tal:define="portal_state context/@@plone_portal_state;
+                              portal_url portal_state/portal_url">
+
+                <span i18n:translate="account_needed">
+                  If you do not have a username and password, please contact the ESD review secretariat: <a i18n:name="esd_secretariat_email" href="mailto:ESD.review@eea.europa.eu">ESD.review@eea.europa.eu</a>
+                </span><br/>
+                <span i18n:translate="help_password_retrieval">
+                  If you forgot your password, you can obtain a new one:
+                  <a i18n:name="click_here" href="http://www.eionet.europa.eu/password-reset">http://www.eionet.europa.eu/password-reset</a>.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </metal:main-macro>
+  </metal:main>
+</body>
+</html>

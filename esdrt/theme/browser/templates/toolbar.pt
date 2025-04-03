@@ -1,0 +1,140 @@
+<section id="edit-bar"
+         role="toolbar"
+         tal:define="
+           context_state view/context_state;
+           icons python:context.restrictedTraverse('@@iconresolver');
+           personal_bar python: view.get_personal_bar();
+           toolbar_pos view/toolbar_position;
+         "
+         tal:condition="context_state/is_toolbar_visible"
+         i18n:domain="plone"
+>
+
+
+  <div class="pat-toolbar"
+       id="edit-zone"
+       role="toolbar"
+       data-bs-scroll="true"
+  >
+
+    <div class="toolbar-header nav">
+      <a class="toolbar-collapse"
+         aria-label="Unpin"
+         i18n:attributes="aria-label"
+      >
+        <tal:icon tal:replace="structure python:icons.tag('arrow-bar-left')" />
+      </a>
+      <a class="toolbar-expand"
+         aria-label="Pin"
+         i18n:attributes="aria-label"
+      >
+        <tal:icon tal:replace="structure python:icons.tag('arrow-bar-right')" />
+      </a>
+    </div>
+
+    <ul class="nav flex-column plone-toolbar-main"
+        tal:define="
+          toolbar_main view/base_render;
+        "
+        tal:condition="toolbar_main"
+    >
+      <li tal:replace="structure toolbar_main">
+      </li>
+    </ul>
+
+    <div class="personaltools-wrapper nav ${python:'dropend' if toolbar_pos == 'side' else ''}"
+         tal:condition="personal_bar/user_actions"
+    >
+
+      <a class="nav-link dropdown-toggle"
+         id="personaltools-menulink"
+         aria-expanded="false"
+         data-bs-offset="0,0"
+         data-bs-toggle="dropdown"
+         tal:attributes="
+           href personal_bar/homelink_url;
+         "
+      >
+        <tal:icon tal:replace="structure python:icons.tag('toolbar-action/personaltools', tag_class='')" />
+        <span class="toolbar-label"
+              tal:content="personal_bar/user_name"
+        >User</span>
+      </a>
+
+      <ul class="dropdown-menu"
+          id="collapse-personaltools"
+          aria-labelledby="personaltools-menulink"
+      >
+        <li>
+          <h6 class="dropdown-header">${personal_bar/user_name}</h6>
+        </li>
+        <li tal:repeat="action personal_bar/user_actions">
+          <a class="nav-link dropdown-item"
+             tal:attributes="
+               action;
+             "
+          >
+            <tal:icon replace="structure python:icons.tag(action.get('icon', 'dot'), tag_class='')" />
+            <tal:actionname tal:content="action/title">
+              action title
+            </tal:actionname>
+          </a>
+        </li>
+
+        <li tal:condition="python:view.user_roles">
+          <div class="dropdown-divider"></div>
+          <ul>
+            <tal:block define="sr python:view.user_roles['sector_review_roles']"
+              condition="sr">
+              <span>Sector review</span>
+              <li tal:repeat="role sr"
+                tal:content="role">
+              </li>          
+            </tal:block>
+            <tal:block define="qe python:view.user_roles['quality_expert_roles']"
+              condition="qe">
+              <span>Quality expert</span>
+              <li tal:repeat="role qe"
+                tal:content="role">
+              </li>          
+            </tal:block>
+            <tal:block define="re python:view.user_roles['review_expert_roles']"
+              condition="re">
+              <span>Review expert</span>
+              <li tal:repeat="role re"
+                tal:content="role">
+              </li>          
+            </tal:block>   
+            <tal:block define="lr python:view.user_roles['lead_review_roles']"
+              condition="lr">
+              <span>Lead review</span>
+              <li tal:repeat="role lr"
+                tal:content="role">
+              </li>          
+            </tal:block>    
+            <tal:block define="msc python:view.user_roles['ms_coordinator_roles']"
+              condition="msc">
+              <span>Member state coordinator</span>
+              <li tal:repeat="role msc"
+                tal:content="role">
+              </li>          
+            </tal:block>     
+            <tal:block define="mse python:view.user_roles['ms_expert_roles']"
+              condition="mse">
+              <span>Member state expert</span>
+              <li tal:repeat="role mse"
+                tal:content="role">
+              </li>          
+            </tal:block>
+          </ul>
+        </li>
+        
+
+
+
+
+      </ul>
+
+    </div>
+  </div>
+</section>

@@ -3,49 +3,20 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="esdrt.theme">
 
-    <!-- 'ESDRT Theme' Zope 3 browser layer
-      Register views, viewlets and resources for this layer to make sure
-      they only apply to the 'ESDRT Theme' theme.
-      You can also use this layer to override default Plone browser views
-      and viewlets only within the 'ESDRT Theme' theme.
-      -->
-    <interface
-        interface=".interfaces.IThemeSpecific"
-        type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="ESDRT Theme"
-        />
-
     <include package="z3c.jbot" file="meta.zcml" />
 
     <browser:jbot
-        directory="template-overrides"
+        directory="overrides"
         layer=".interfaces.IThemeSpecific" />
-    <browser:viewlet
-        name="plone.logo"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets.LogoViewlet"
-        permission="zope.Public"
-        />
-    <browser:viewlet
-        name="plone.footer"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets.FooterViewlet"
-        permission="zope.Public"
-        /> 
-    <browser:viewlet
-        name="plone.personal_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        layer=".interfaces.IThemeSpecific"
-        class=".viewlets.PersonalBarViewlet"
-        permission="zope.Public"
-        />     
-    <!--browser:viewlet
-        name="esdrt.productversion"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        class=".viewlets.ProductVersionViewlet"
-        permission="zope.Public"
-        template="templates/product_version.pt"
-        /-->              
+
+    <configure package="plone.app.layout.viewlets">
+        <browser:viewletManager
+          name="plone.toolbar"
+          provides=".interfaces.IToolbar"
+          class="esdrt.theme.browser.toolbar.ToolbarViewletManager"
+          layer="esdrt.theme.interfaces.IEsdrtThemeLayer"
+          permission="zope2.View"
+          />
+    </configure>
+
 </configure>

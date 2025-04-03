@@ -1,0 +1,15 @@
+#portal-logo img {
+    width: 128px;
+}
+
+#portal-footer-wrapper {
+    background: linear-gradient(to top, $primary, $secondary);
+}
+
+.navbar-barceloneta,
+#portal-globalnav-wrapper {
+    background: linear-gradient(to top, $primary, $secondary);
+    .navbar-nav li {
+        background: linear-gradient(to top, $primary, $secondary);
+    }
+}
