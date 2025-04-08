@@ -13,3 +13,16 @@
         background: linear-gradient(to top, $primary, $secondary);
     }
 }
+
+#content-header #portal-siteactions {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+}

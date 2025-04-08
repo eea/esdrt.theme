@@ -5,6 +5,7 @@
     i18n_domain="emrt.necd.theme">
 
   <include package=".browser"/>
+  <include file="viewlets.zcml"/>
 
   <genericsetup:registerProfile
       name="default"
