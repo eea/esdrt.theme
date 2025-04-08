@@ -46,7 +46,7 @@
    <drop css:content="#portal-logo"  />
 
   <replace css:theme="#portal-header-children" css:content-children="#portal-header" />
-  <replace css:theme="#portal-top-children" css:content-children="#portal-top" />
+  <replace css:theme-children="#portal-siteactions" css:content-children="#portal-siteactions" />
 
   <!-- full-width breadcrumb -->
   <replace css:theme="#above-content" css:content="#viewlet-above-content" />
