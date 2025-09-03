@@ -33,6 +33,8 @@ body.portaltype-conclusion,
 body.portaltype-conclusionsphase2,
 body.portaltype-observation {
   #edit-bar .plone-toolbar-main {
-    display: none;
+    > li:not(.plonetoolbar-workfow-transition) {
+      display: none;
+    }
   }
 }
